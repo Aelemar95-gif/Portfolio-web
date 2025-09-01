@@ -67,7 +67,7 @@ const Projects = () => {
                   <div className="absolute bottom-4 left-4 right-4 flex space-x-3">
                     <a 
                       href={project.github} 
-                      className="inline-flex items-center px-4 py-2 bg-white/90 dark:bg-slate-800/90 text-slate-800 dark:text-white rounded-lg text-sm font-medium hover:bg-white dark:hover:bg-slate-800 transition-colors"
+                      className="inline-flex items-center px-4 py-2 bg-white/90 dark:bg-slate-800/90 text-slate-800 dark:text-white rounded-lg text-sm font-medium hover:bg-white dark:hover:bg-slate-700 transition-colors"
                     >
                       <Github size={16} className="mr-2" />
                       Código

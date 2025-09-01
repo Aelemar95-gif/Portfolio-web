@@ -153,7 +153,7 @@ const Skills = () => {
                     {category.skills.map((skill, skillIndex) => (
                       <li
                         key={skillIndex}
-                        className=" flex font-medium bg-slate-100 dark:bg-slate-600 text-slate-800 dark:text-white p-2 rounded border-l-4 max-w-[calc(90)]"
+                        className="flex font-medium bg-slate-100 dark:bg-slate-600 text-slate-800 dark:text-white p-2 rounded border-l-4"
                         style={{
                           borderLeftColor: categoryColors[category.color.replace('bg-', '')]
                         }}
