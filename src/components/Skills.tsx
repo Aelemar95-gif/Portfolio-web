@@ -110,28 +110,28 @@ const Skills = () => {
   };
 
   return (
-    <section id="habilidades" className="py-20 bg-slate-50">
+    <section id="habilidades" className="py-20 bg-slate-50 dark:bg-slate-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Technical Skills */}
         <div className="mb-20">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
               Habilidades Técnicas
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               Dominio de tecnologías SAP, herramientas de análisis de datos y 
               bases de datos para ofrecer soluciones empresariales efectivas
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {technicalSkills.map((category, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+              <div key={index} className="bg-white dark:bg-slate-700 rounded-xl shadow-lg dark:shadow-xl p-6 hover:shadow-xl dark:hover:shadow-2xl transition-shadow duration-300">
                 <div className="flex items-center mb-6">
                   <div className={`${category.color} p-3 rounded-lg mr-4`}>
                     <category.icon className="text-white" size={24} />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">{category.category}</h3>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">{category.category}</h3>
                 </div>
                 {/*Tarjetas con lista de skills*/}
                 
@@ -153,7 +153,7 @@ const Skills = () => {
                     {category.skills.map((skill, skillIndex) => (
                       <li
                         key={skillIndex}
-                        className=" flex font-medium bg-slate-100 p-2 rounded border-l-4 max-w-[calc(90)]"
+                        className=" flex font-medium bg-slate-100 dark:bg-slate-600 text-slate-800 dark:text-white p-2 rounded border-l-4 max-w-[calc(90)]"
                         style={{
                           borderLeftColor: categoryColors[category.color.replace('bg-', '')]
                         }}
@@ -171,10 +171,10 @@ const Skills = () => {
         {/* Personal Skills */}
         <div>
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
               Competencias Personales
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               Habilidades interpersonales y metodológicas que complementan 
               mi perfil técnico para un desempeño integral
             </p>
@@ -182,16 +182,16 @@ const Skills = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {personalSkills.map((skill, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group">
+              <div key={index} className="bg-white dark:bg-slate-700 rounded-xl shadow-lg dark:shadow-xl p-6 hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300 group">
                 <div className="flex items-start space-x-4">
-                  <div className={`${skill.color} p-3 bg-slate-50 rounded-lg group-hover:bg-slate-100 transition-colors`}>
+                  <div className={`${skill.color} p-3 bg-slate-50 dark:bg-slate-600 rounded-lg group-hover:bg-slate-100 dark:group-hover:bg-slate-500 transition-colors`}>
                     <skill.icon size={24} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
                       {skill.name}
                     </h3>
-                    <p className="text-slate-600 leading-relaxed text-sm">
+                    <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">
                       {skill.description}
                     </p>
                   </div>
@@ -202,9 +202,9 @@ const Skills = () => {
         </div>
 
         {/* Certifications */}
-        <div className="mt-20 bg-white rounded-xl shadow-lg p-8">
+        <div className="mt-20 bg-white dark:bg-slate-700 rounded-xl shadow-lg dark:shadow-xl p-8">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Certificaciones</h3>
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Certificaciones</h3>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -213,9 +213,9 @@ const Skills = () => {
               "Microsoft Power BI Data Analyst",
               "Google Data Analytics Certificate",
             ].map((cert, index) => (
-              <div key={index} className="flex items-center space-x-3 p-4 bg-slate-50 rounded-lg">
-                <CheckCircle className="text-green-600" size={20} />
-                <span className="text-slate-800 font-medium">{cert}</span>
+              <div key={index} className="flex items-center space-x-3 p-4 bg-slate-50 dark:bg-slate-600 rounded-lg">
+                <CheckCircle className="text-green-600 dark:text-green-400" size={20} />
+                <span className="text-slate-800 dark:text-white font-medium">{cert}</span>
               </div>
             ))}
           </div>
