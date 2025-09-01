@@ -213,7 +213,7 @@ const Skills = () => {
               "Microsoft Power BI Data Analyst",
               "Google Data Analytics Certificate",
             ].map((cert, index) => (
-              <div key={index} className="flex items-center space-x-3 p-4 bg-slate-50 dark:bg-slate-600 rounded-lg">
+              <div key={index} className="flex items-center space-x-3 p-4 bg-slate-100 dark:bg-slate-600 rounded-lg">
                 <CheckCircle className="text-green-600 dark:text-green-400" size={20} />
                 <span className="text-slate-800 dark:text-white font-medium">{cert}</span>
               </div>
