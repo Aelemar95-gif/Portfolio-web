@@ -1,0 +1,29 @@
+/* 
+  Este archivo define estilos personalizados para las viñetas (bullets) de listas <ul>.
+  Utiliza la pseudo-clase ::marker para cambiar solo el color de la viñeta, sin afectar el texto.
+*/
+
+/* Si el <ul> tiene la clase 'color-bullets', la viñeta hereda el color del elemento padre */
+ul.color-bullets li::marker {
+  color: inherit;
+}
+
+/* Viñetas azules para listas con la clase 'bullet-blue-700' (Tailwind blue-700) */
+.bullet-blue-700 li::marker {
+  color: #1d4ed8;
+}
+
+/* Viñetas verdes para listas con la clase 'bullet-green-600' (Tailwind green-600) */
+.bullet-green-600 li::marker {
+  color: #16a34a;
+}
+
+/* Viñetas púrpuras para listas con la clase 'bullet-purple-600' (Tailwind purple-600) */
+.bullet-purple-600 li::marker {
+  color: #9333ea;
+}
+
+/* Viñetas naranjas para listas con la clase 'bullet-orange-600' (Tailwind orange-600) */
+.bullet-orange-600 li::marker {
+  color: #ea580c;
+}
