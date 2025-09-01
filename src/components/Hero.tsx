@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 // Importa los íconos que se usan en el componente
 import { Download, MapPin, Mail, Phone } from 'lucide-react';
 
 // Componente principal Hero
 const Hero = () => {
+  // Estado para controlar si se muestra la foto (true) o las iniciales (false)
+  const [showPhoto, setShowPhoto] = useState(true);
+  
+  // URL de la imagen de perfil (placeholder - reemplazar con tu foto real)
+  const photoUrl = "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=800";
+
   return (
     // Sección principal con fondo degradado y padding superior
     <section id="inicio" className="min-h-screen flex items-center bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 pt-16">
@@ -66,8 +72,26 @@ const Hero = () => {
             <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 max-w-md">
               <div className="text-center space-y-6">
                 {/* Avatar con iniciales */}
-                <div className="w-32 h-32 mx-auto bg-gradient-to-br from-blue-700 to-blue-900 dark:from-blue-600 dark:to-blue-800 rounded-full flex items-center justify-center text-white text-4xl font-bold">
-                  JD
+                <div 
+                  className="w-32 h-32 mx-auto rounded-full overflow-hidden cursor-pointer relative border-4 border-blue-700 dark:border-blue-600 p-1 hover:border-blue-800 dark:hover:border-blue-500 transition-colors duration-300"
+                  onClick={() => setShowPhoto(!showPhoto)}
+                  title="Haz clic para alternar entre foto e iniciales"
+                >
+                  {/* Imagen de perfil */}
+                  <img
+                    src={photoUrl}
+                    alt="Julian Duarte"
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 rounded-full"
+                    style={{ opacity: showPhoto ? 1 : 0 }}
+                  />
+                  
+                  {/* Iniciales JD */}
+                  <div 
+                    className="absolute inset-0 transition-opacity duration-500 flex items-center justify-center text-white text-4xl font-bold bg-gradient-to-br from-blue-700 to-blue-900 dark:from-blue-600 dark:to-blue-800 rounded-full"
+                    style={{ opacity: showPhoto ? 0 : 1 }}
+                  >
+                    JD
+                  </div>
                 </div>
                 
                 {/* Nombre y título */}
