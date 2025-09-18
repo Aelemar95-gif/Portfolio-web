@@ -7,19 +7,22 @@ const Hero = () => {
   // Estado para controlar si se muestra la foto (true) o las iniciales (false)
   const [showPhoto, setShowPhoto] = useState(true);
   
-  // URL de la imagen de perfil (placeholder - reemplazar con tu foto real)
-  const photoUrl = "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=800";
+  // URL de la imagen de perfil
+  const photoUrl = "/img/foto_cv_boina.jpeg";
 
   return (
     // Sección principal con fondo degradado y padding superior
     <section id="inicio" className="min-h-screen flex items-center bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 pt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Grid para dividir el contenido en dos columnas en pantallas grandes */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid  lg:grid-cols-2 gap-12 items-center">
           {/* Columna de contenido principal */}
           <div className="space-y-8">
             <div className="space-y-4">
               {/* Título principal */}
+              <h1 className="text-4xl sm:text-2xl lg:text-2xl font-bold text-slate-900 dark:text-white leading-tight">
+                Sobre mi
+              </h1>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white leading-tight">
                 Consultor SAP &
                 <span className="text-blue-700 dark:text-blue-400 block">Analista de Datos</span>
@@ -37,6 +40,8 @@ const Hero = () => {
               {/* Botón para descargar el CV (debería ser un <a> para descargar realmente) */}
               <a
                 href="/Julian_Duarte_CV_Harvard.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 download
                 className="inline-flex items-center px-8 py-4 bg-blue-700 dark:bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-800 dark:hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
               >
@@ -73,7 +78,7 @@ const Hero = () => {
               <div className="text-center space-y-6">
                 {/* Avatar con iniciales */}
                 <div 
-                  className="w-32 h-32 mx-auto rounded-full overflow-hidden cursor-pointer relative border-4 border-blue-700 dark:border-blue-600 p-1 hover:border-blue-800 dark:hover:border-blue-500 transition-colors duration-300"
+                  className="w-48 h-48 mx-auto rounded-full overflow-hidden cursor-pointer relative border-4 border-blue-700 dark:border-blue-600 p-1 hover:border-blue-800 dark:hover:border-blue-500 transition-colors duration-300"
                   onClick={() => setShowPhoto(!showPhoto)}
                   title="Haz clic para alternar entre foto e iniciales"
                 >

@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) => {
   };
 
   const navItems = [
-    { id: 'inicio', label: 'Inicio', icon: User },
+    { id: 'inicio', label: 'Sobre mi', icon: User },
     { id: 'proyectos', label: 'Proyectos', icon: Code },
     { id: 'habilidades', label: 'Habilidades', icon: Award },
     { id: 'contacto', label: 'Contacto', icon: MessageCircle }
@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) => {
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="font-bold text-xl text-slate-800 dark:text-white">
-            JDev - Portfolio
+            Julian Duarte - Portfolio
           </div>
 
           {/* Desktop Navigation */}

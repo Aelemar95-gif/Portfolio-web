@@ -24,7 +24,6 @@ const Skills = () => {
       skills: [
         { name: "SAP S/4HANA" },
         { name: "SAP FI/CO" },
-        { name: "SAP BW/4HANA" },
         { name: "SAP ABAP" }
       ]
     },
@@ -57,8 +56,8 @@ const Skills = () => {
       skills: [
         { name: "Jupyter Notebook" },
         { name: "Git/GitHub" },
-        { name: "Tableau" },
-        { name: "R" }
+
+
       ]
     }
   ];
