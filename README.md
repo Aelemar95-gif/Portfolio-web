@@ -25,4 +25,4 @@ Este es mi portfolio personal, desarrollado con **React + Vite** y **Tailwind CS
 📬 **Contacto**  
 Si querés saber más sobre mí o mi trabajo, podés escribirme:  
 **Email:** julianduarte1995@gmail.com
-**LinkedIn:** [Julian Duarte]([https://www.linkedin.com/in/j-duarte-sistemas/])
+**LinkedIn:** https://www.linkedin.com/in/j-duarte-sistemas/
